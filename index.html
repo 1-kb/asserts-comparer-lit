@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <script type="module" src="./src/asserts-comparer.ts"></script>
+  <style>
+    asserts-comparer {
+      display: block;
+      width: 400px;
+      height: 200px;
+    }
+    asserts-comparer::before {
+      content: ' Example: ' attr(mode);
+    }
+    div {
+      display: flex;
+      margin-top: 4px;
+    }
+    [mode="two-up"] {
+      width: 800px;
+    }
+    img,
+    video {
+      width: 400px;
+      height: 200px;
+    }
+
+  </style>
+</head>
+<body>
+  <asserts-comparer mode="two-up">
+    <img slot="one" src="https://placehold.co/400x200" />
+    <video
+      slot="two"
+      src="https://media.w3.org/2010/05/sintel/trailer.mp4"
+      autoplay
+    ></video>
+  </asserts-comparer>
+  <div>
+    <asserts-comparer mode="split">
+      <img slot="one" src="https://placehold.co/400x200" />
+      <video
+        slot="two"
+        src="https://media.w3.org/2010/05/sintel/trailer.mp4"
+        autoplay
+      ></video>
+    </asserts-comparer>
+    <asserts-comparer mode="blend">
+      <img slot="one" src="https://placehold.co/400x200" />
+      <video
+        slot="two"
+        src="https://media.w3.org/2010/05/sintel/trailer.mp4"
+        autoplay
+      ></video>
+    </asserts-comparer>
+  </div>
+  <asserts-comparer mode="two-up">
+    <img slot="one" src="https://placehold.co/500x200/000000/FFF" />
+    <img slot="two" src="https://placehold.co/400x200" />
+  </asserts-comparer>
+  <div>
+    <asserts-comparer mode="split">
+      <img slot="one" src="https://placehold.co/500x200/000000/FFF" />
+      <img slot="two" src="https://placehold.co/400x200" />
+    </asserts-comparer>
+    <asserts-comparer mode="blend">
+      <img slot="one" src="https://placehold.co/500x200/000000/FFF" />
+      <img slot="two" src="https://placehold.co/400x200" />
+    </asserts-comparer>
+  </div>
+</body>

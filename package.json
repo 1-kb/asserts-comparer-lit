@@ -1,0 +1,25 @@
+{
+  "name": "@1-kb/asserts-comparer-lit",
+  "version": "0.0.1",
+  "main": "dist/index.es.js",
+  "exports": {
+    ".": "./dist/index.es.js"
+  },
+  "types": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "dev": "pnpx vite",
+    "build": "pnpx vite build"
+  },
+  "author": "Gitai<i@gitai.me>",
+  "license": "WTFPL",
+  "dependencies": {
+    "lit": "^2.0.0",
+    "@lit/reactive-element": "^1.0.0",
+    "lit-element": "^3.0.0",
+    "lit-html": "^2.0.0"
+  }
+}
